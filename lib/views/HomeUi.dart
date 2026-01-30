@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'Go_to_A_Page.dart';
 import 'Go_to_B_Page.dart';
+import 'Go_to_C_Page.dart';
+import 'Go_to_D_Page.dart';
+import 'Go_to_E_Page.dart';
 
 class HomeUi extends StatelessWidget {
   const HomeUi({super.key});
@@ -100,6 +103,96 @@ class HomeUi extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
+                ),
+                SizedBox(
+                  width: 50.0,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Go_to_C_Page(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(
+                      150.0,
+                      50.0,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    backgroundColor: Colors.black,
+                  ),
+                  child: Text(
+                    'SIGNUP',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 50.0,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Go_to_D_Page(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(
+                      150.0,
+                      50.0,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    backgroundColor: Colors.black,
+                  ),
+                  child: Text(
+                    'SIGNUP',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 50.0,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Go_to_E_Page(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    fixedSize: Size(
+                      150.0,
+                      50.0,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                    backgroundColor: Colors.black,
+                  ),
+                  child: Text(
+                    'SIGNUP',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 50.0,
                 ),
               ],
             ),
