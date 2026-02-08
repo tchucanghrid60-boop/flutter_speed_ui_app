@@ -13,128 +13,137 @@ class _B02PageUIState extends State<B02PageUI> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                const SizedBox(height: 20),
-                const Text(
-                  'Login here',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 50,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF1E5BA8),
-                  ),
-                ),
-                const SizedBox(height: 12),
-                const Text(
-                  "Welcome back you've been missed!",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Color(0xFF666666),
-                  ),
-                ),
-                const SizedBox(height: 30),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: Column(
+            children: [
+              // ===== ส่วนบน Login =====
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      const SizedBox(height: 50),
 
-                // Email field
-                TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Email',
-                    filled: true,
-                    fillColor: const Color(0xFFF5F7FB),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide(color: const Color(0xFF1E5BA8)),
-                    ),
-                    contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 18),
-                  ),
-                ),
-                const SizedBox(height: 16),
-
-                // Password field
-                TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: 'Password',
-                    filled: true,
-                    fillColor: const Color(0xFFF5F7FB),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide.none,
-                    ),
-                    contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 18),
-                  ),
-                ),
-                const SizedBox(height: 8),
-
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: () {},
-                    child: const Text(
-                      'Forgot your password?',
-                      style: TextStyle(color: Color(0xFF1E5BA8)),
-                    ),
-                  ),
-                ),
-
-                const SizedBox(height: 12),
-                // Sign in button
-                SizedBox(
-                  height: 50,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF1E5BA8),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)),
-                    ),
-                    child: const Text('Sign in',
+                      const Text(
+                        'Login here',
+                        textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600)),
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF1E5BA8),
+                        ),
+                      ),
+
+                      const SizedBox(height: 12),
+
+                      const Text(
+                        "Welcome back you've been missed!",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 14),
+                      ),
+
+                      const SizedBox(height: 50),
+
+                      // Email
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Email',
+                          filled: true,
+                          fillColor: Color(0xFFF5F7FB),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                      ),
+
+                      const SizedBox(height: 50),
+
+                      // Password
+                      TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          hintText: 'Password',
+                          filled: true,
+                          fillColor: Color(0xFFF5F7FB),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                      ),
+
+                      const SizedBox(height: 50),
+
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: const Text('Forgot your password?'),
+                        ),
+                      ),
+
+                      const SizedBox(height: 8),
+
+                      // Sign in button
+                      SizedBox(
+                        width: double.infinity, // เต็มความกว้าง
+                        height: 60, // 👈 เพิ่มความสูงปุ่ม
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF2E4BB7),
+                            elevation: 6, // เงานุ่ม
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(25), // โค้งมน
+                            ),
+                          ),
+                          child: const Text(
+                            'Sign in',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20, // ตัวหนังสือใหญ่ขึ้น
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      Center(
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => const B03PageUI(),
+                              ),
+                            );
+                          },
+                          child: const Text('Create new account'),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
+              ),
 
-                const SizedBox(height: 20),
-                Center(
-                    child: TextButton(
-                        onPressed: () {
-                          // Navigate to register (B03)
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                                builder: (context) => const B03PageUI()),
-                          );
-                        },
-                        child: const Text('Create new account',
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 0, 0))))),
-
-                const SizedBox(height: 20),
-                const Center(
-                    child: Text('Or continue with',
-                        style: TextStyle(color: Color(0xFF999999)))),
-                const SizedBox(height: 16),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    _socialButton('assets/images/Group 19.png'),
-                    const SizedBox(width: 12),
-                    _socialButton('assets/images/Group 20.png'),
-                    const SizedBox(width: 12),
-                    _socialButton('assets/images/ci_apple.png'),
-                  ],
-                ),
-                const SizedBox(height: 30),
-              ],
-            ),
+              // ===== ส่วนล่าง Social Login =====
+              Column(
+                children: [
+                  const Text("Or continue with"),
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _socialButton('assets/images/Group 19.png'),
+                      const SizedBox(width: 12),
+                      _socialButton('assets/images/Group 20.png'),
+                      const SizedBox(width: 12),
+                      _socialButton('assets/images/ci_apple.png'),
+                    ],
+                  ),
+                  const SizedBox(height: 60),
+                ],
+              ),
+            ],
           ),
         ),
       ),
@@ -151,11 +160,13 @@ class _B02PageUIState extends State<B02PageUI> {
       ),
       child: IconButton(
         onPressed: () {},
-        icon: Image.asset(asset,
-            width: 22,
-            height: 22,
-            errorBuilder: (c, e, s) =>
-                const Icon(Icons.public, color: Color(0xFF1E5BA8))),
+        icon: Image.asset(
+          asset,
+          width: 22,
+          height: 22,
+          errorBuilder: (c, e, s) =>
+              const Icon(Icons.public, color: Color(0xFF1E5BA8)),
+        ),
       ),
     );
   }

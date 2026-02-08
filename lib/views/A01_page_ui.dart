@@ -7,25 +7,25 @@ class A01PageUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF2F2F2),
+      backgroundColor: const Color(0xFFEDEDED),
       body: SafeArea(
         child: Column(
           children: [
-            // Pink Image Section
+            // TOP PINK IMAGE AREA (ใหญ่)
             Container(
               width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.45,
+              height: MediaQuery.of(context).size.height * 0.5, // ครึ่งจอ
               decoration: const BoxDecoration(
                 color: Color(0xFFD97AC7),
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(30),
+                  bottomLeft: Radius.circular(40),
+                  bottomRight: Radius.circular(40),
                 ),
               ),
               child: Center(
                 child: Image.asset(
-                  "assets/images/Saly-1.png", // รูปของน้อง
-                  height: 700,
+                  "assets/images/Saly-1.png",
+                  height: 650,
                   fit: BoxFit.contain,
                 ),
               ),
@@ -33,7 +33,7 @@ class A01PageUI extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // Title
+            // TITLE
             const Text(
               "Discover Your\nOwn Dream House",
               textAlign: TextAlign.center,
@@ -45,14 +45,11 @@ class A01PageUI extends StatelessWidget {
 
             const SizedBox(height: 12),
 
-            // Description
+            // DESCRIPTION
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30),
               child: const Text(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
-                "Diam maecenas mi non sed ut odio. Non, justo, sed facilisi et. "
-                "Eget viverra urna, vestibulum egestas faucibus egestas. "
-                "Sagittis nam velit volutpat eu nunc.",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam maecenas mi non sed ut odio. Non, justo, sed facilisi et. Eget viverra urna, vestibulum egestas faucibus egestas. Sagittis nam velit volutpat eu nunc.",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 14,
@@ -63,7 +60,7 @@ class A01PageUI extends StatelessWidget {
 
             const Spacer(),
 
-            // Sign in / Register Button Bar
+            // SIGN IN / REGISTER BAR
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
               child: Container(
@@ -77,9 +74,7 @@ class A01PageUI extends StatelessWidget {
                     // Sign in
                     Expanded(
                       child: GestureDetector(
-                        onTap: () {
-                          print("Sign in clicked");
-                        },
+                        onTap: () {},
                         child: Container(
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
@@ -109,9 +104,8 @@ class A01PageUI extends StatelessWidget {
                             ),
                           );
                         },
-                        child: Container(
-                          alignment: Alignment.center,
-                          child: const Text(
+                        child: const Center(
+                          child: Text(
                             "Register",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,

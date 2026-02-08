@@ -35,7 +35,7 @@ class _B03PageUIState extends State<B03PageUI> {
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 14, color: Color(0xFF666666)),
                 ),
-                const SizedBox(height: 28),
+                const SizedBox(height: 50),
 
                 // Email
                 TextField(
@@ -51,7 +51,7 @@ class _B03PageUIState extends State<B03PageUI> {
                         horizontal: 16, vertical: 18),
                   ),
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 50),
 
                 // Password
                 TextField(
@@ -68,7 +68,7 @@ class _B03PageUIState extends State<B03PageUI> {
                         horizontal: 16, vertical: 18),
                   ),
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 50),
 
                 // Confirm Password
                 TextField(
@@ -85,7 +85,7 @@ class _B03PageUIState extends State<B03PageUI> {
                         horizontal: 16, vertical: 18),
                   ),
                 ),
-                const SizedBox(height: 24),
+                const SizedBox(height: 50),
 
                 // Sign up button
                 SizedBox(
@@ -111,7 +111,7 @@ class _B03PageUIState extends State<B03PageUI> {
                   ),
                 ),
 
-                const SizedBox(height: 12),
+                const SizedBox(height: 50),
                 GestureDetector(
                   onTap: () {
                     // Already have an account -> go to B02
@@ -128,11 +128,11 @@ class _B03PageUIState extends State<B03PageUI> {
                   ),
                 ),
 
-                const SizedBox(height: 16),
+                const SizedBox(height: 50),
                 const Center(
                     child: Text('Or continue with',
                         style: TextStyle(color: Color(0xFF999999)))),
-                const SizedBox(height: 12),
+                const SizedBox(height: 50),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -143,7 +143,7 @@ class _B03PageUIState extends State<B03PageUI> {
                     _socialButton('assets/images/ci_apple.png'),
                   ],
                 ),
-                const SizedBox(height: 24),
+                const SizedBox(height: 150),
               ],
             ),
           ),

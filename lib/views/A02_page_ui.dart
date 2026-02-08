@@ -30,9 +30,7 @@ class A02PageUI extends StatelessWidget {
 
                 // Subtitle
                 const Text(
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n"
-                  "Diam maecenas mi non sed ut odio. Non, justo,\n"
-                  "sed facilisi et.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam maecenas mi non sed ut odio. Non, justo, sed facilisi et. ",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 13,
