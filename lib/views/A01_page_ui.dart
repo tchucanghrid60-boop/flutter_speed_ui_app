@@ -38,7 +38,7 @@ class A01PageUI extends StatelessWidget {
               "Discover Your\nOwn Dream House",
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 26,
+                fontSize: 40,
                 fontWeight: FontWeight.bold,
               ),
             ),

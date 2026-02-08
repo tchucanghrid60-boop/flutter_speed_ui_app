@@ -25,16 +25,7 @@ class HomeUi extends StatelessWidget {
         child: Column(
           children: [
             // Header
-            Padding(
-              padding: const EdgeInsets.only(top: 20, bottom: 30),
-              child: Text(
-                'HomeUI',
-                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
-            ),
+
             // Image
             Expanded(
               flex: 2,
@@ -99,7 +90,7 @@ class HomeUi extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => const B01PageUi(),
+                              builder: (context) => const B01PageUI(),
                             ),
                           );
                         },

@@ -21,7 +21,7 @@ class A02PageUI extends StatelessWidget {
                 const Text(
                   "Welcome Back",
                   style: TextStyle(
-                    fontSize: 28,
+                    fontSize: 50,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
